@@ -4,11 +4,20 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prebuild": "node build.config.js",
     "build": "ng build",
+    "watch": "ng build --watch",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:edge": "cross-env BUILD_ENV=edge npm run build",
+    "build:chrome": "cross-env BUILD_ENV=chrome npm run build",
+    "build:firefox": "cross-env BUILD_ENV=chrome npm run build"
   },
+  "possible_perm": [
+    "webNavigation",
+    "webRequest"
+  ],
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.5",
@@ -28,10 +37,13 @@
     "@angular/cli": "~9.0.5",
     "@angular/compiler-cli": "~9.0.5",
     "@angular/language-service": "~9.0.5",
-    "@types/node": "^12.11.1",
+    "@types/firefox": "^0.0.29",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "cross-env": "^7.0.2",
+    "deepmerge": "^4.2.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.3.0",
