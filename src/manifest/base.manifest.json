@@ -6,17 +6,24 @@
   "author": "nopantsmonkey",
   "browser_action": {
     "default_icon": {
-      "16": "images/icon16-disabled.png",
-      "48": "images/icon48-disabled.png",
-      "128": "images/icon128-disabled.png"
+      "16": "assets/images/icon16.png",
+      "48": "assets/images/icon32.png",
+      "128": "assets/images/icon192.png"
     },
-    "default_popup": "popup.html"
+    "default_popup": "index.html"
   },
-  "default_locale": "en",
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "run_at": "document_end",
+      "matches": [ "<all_urls>" ],
+      "js": ["assets/echo.js"]
+    }
+  ],
   "icons": {
-    "16": "images/icon16.png",
-    "48": "images/icon48.png",
-    "128": "images/icon128.png"
+    "16": "assets/images/icon16.png",
+    "48": "assets/images/icon32.png",
+    "128": "assets/images/icon192.png"
   },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

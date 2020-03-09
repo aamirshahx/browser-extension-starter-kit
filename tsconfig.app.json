@@ -8,6 +8,10 @@
     "src/main.ts",
     "src/polyfills.ts"
   ],
+  "typeRoots": [
+    "node_modules/@types",
+    "node_modules/web-ext-types"
+  ],
   "include": [
     "src/**/*.d.ts"
   ]
