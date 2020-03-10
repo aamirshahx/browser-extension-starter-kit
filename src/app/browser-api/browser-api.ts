@@ -1,10 +1,10 @@
-import {Message} from '../communication/message';
-import {browser} from 'webextension-polyfill-ts';
+import { Message } from '../../communication/message';
+import { browser } from 'webextension-polyfill-ts';
 
 export enum Browser {
-  Chrome = 'Chrome',
-  Edge = 'Edge',
-  Firefox = 'Firefox'
+  Chrome = 'chrome',
+  Edge = 'edge',
+  Firefox = 'firefox'
 }
 
 export function detectBrowser(): Browser {

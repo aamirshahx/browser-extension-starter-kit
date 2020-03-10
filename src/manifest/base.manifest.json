@@ -12,6 +12,10 @@
     },
     "default_popup": "index.html"
   },
+  "background": {
+    "script": ["background.js"],
+    "persistent": false
+  },
   "content_scripts": [
     {
       "all_frames": false,

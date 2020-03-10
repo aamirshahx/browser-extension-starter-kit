@@ -12,7 +12,8 @@
     "e2e": "ng e2e",
     "build:edge": "cross-env BUILD_ENV=edge npm run build",
     "build:chrome": "cross-env BUILD_ENV=chrome npm run build",
-    "build:firefox": "cross-env BUILD_ENV=chrome npm run build"
+    "build:firefox": "cross-env BUILD_ENV=chrome npm run build",
+    "webpack": "webpack"
   },
   "possible_perm": [
     "webNavigation",
@@ -30,9 +31,11 @@
     "@angular/router": "~9.0.5",
     "ramda": "^0.27.0",
     "rxjs": "~6.5.4",
+    "ts-loader": "^6.2.1",
     "tslib": "^1.10.0",
     "webextension-polyfill": "^0.6.0",
     "webextension-polyfill-ts": "^0.13.0",
+    "webpack": "^4.42.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -40,13 +43,16 @@
     "@angular/cli": "~9.0.5",
     "@angular/compiler-cli": "~9.0.5",
     "@angular/language-service": "~9.0.5",
+    "@ngtools/webpack": "^9.0.5",
     "@types/chrome": "^0.0.99",
     "@types/firefox": "^0.0.29",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
+    "clean-webpack-plugin": "^3.0.0",
     "codelyzer": "^5.1.2",
     "cross-env": "^7.0.2",
+    "css-loader": "^3.4.2",
     "deepmerge": "^4.2.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -55,10 +61,16 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "merge-jsons-webpack-plugin": "^1.0.20",
     "protractor": "~5.4.3",
+    "raw-loader": "^4.0.0",
+    "to-string-loader": "^1.1.6",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "~3.7.5",
-    "web-ext-types": "^3.2.1"
+    "url-loader": "^3.0.0",
+    "web-ext-types": "^3.2.1",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.11"
   }
 }

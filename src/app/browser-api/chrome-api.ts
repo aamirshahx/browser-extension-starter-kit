@@ -1,5 +1,5 @@
 import {BrowserApi} from './browser-api';
-import {Message} from '../communication/message';
+import {Message} from '../../communication/message';
 
 export class ChromeApi extends BrowserApi {
   constructor() {
